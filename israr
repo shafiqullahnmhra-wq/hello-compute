@@ -1,0 +1,71 @@
+Project Request: Database System for Income and Tax Calculation
+
+I need a simple database system to be built with the following specifications:
+
+Core Purpose:
+Track individuals' income and automatically calculate their tax liability based on a specific rule.
+
+Data to Store (Tables/Fields):
+
+People Table:
+
+Person ID (Unique, Auto-generated)
+
+Full Name
+
+(Optional: Contact info, date added)
+
+Income & Tax Table (linked to People Table):
+
+Record ID
+
+Person ID (Link to the person)
+
+Salary/Income Amount (a number field)
+
+Tax Rate Applied (to be auto-calculated)
+
+Tax Amount (to be auto-calculated)
+
+Net Income (Income - Tax Amount, can be auto-calculated)
+
+Calculation Date
+
+The Core Rule (Business Logic):
+
+If Income is LESS than 30,000: The tax rate is 5%.
+
+If Income is 30,000 or MORE: The tax rate is 10%.
+
+Functional Requirements:
+
+Data Entry Form: A simple way to input/register a person and their income.
+
+Automatic Calculation: When an income is entered or updated, the system must:
+
+Check the amount against the 30,000 threshold.
+
+Apply the correct tax rate (5% or 10%).
+
+Calculate the Tax Amount (Income * Rate) and Net Income.
+
+Save all this information automatically.
+
+View & Manage Data: A page/interface to see all records (People, their Income, Applied Tax Rate, Tax Amount, Net Income).
+
+Edit & Update: Ability to edit a person's name or update their income. When income is updated, the tax should recalculate automatically.
+
+Delete: Ability to remove records.
+
+Export/Download Data: A crucial feature. I need to be able to download the entire list (or filtered data) in a common format like Excel (.xlsx) or CSV.
+
+Technical Preference (for the developer):
+
+A clean, simple web interface is perfect.
+
+Please use a common and reliable database like PostgreSQL, MySQL, or even SQLite.
+
+The logic for the tax calculation must be reliable and run on the server-side or securely in the database.
+
+Deliverable:
+A fully functional web application with the features above, including the ability to add, view, edit, delete, and download the income and tax data.
